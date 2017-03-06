@@ -1,0 +1,115 @@
+<html>
+<head>
+<title> Rand RGB Changer </title>
+
+<script type="text/javascript">
+
+            var IE = document.all?true:false
+
+
+            if (!IE) document.captureEvents(Event.MOUSEMOVE)
+
+                document.onmousemove = getMouseXY;
+
+
+                var tempX = 0
+                var tempY = 0
+
+
+            function getMouseXY(e) {
+                if (IE) {
+
+                    tempX = event.clientX + document.body.scrollLeft
+                    tempY = event.clientY + document.body.scrollTop
+
+                } else {
+
+                    tempX = e.pageX
+                    tempY = e.pageY
+                }
+
+                document.Show.MouseX.value = tempX
+                document.Show.MouseY.value = tempY
+
+                console.clear();
+                console.log("x: " + tempX);
+                console.log("y: " + tempY);
+
+                var fontRGB = []
+                var rgb = [];
+                for(var i = 0; i < 3; i++)
+                rgb.push(Math.floor(Math.random() * 255));
+
+                document.body.style.backgroundColor = 'rgb('+ rgb.join(',') +')';
+                document.Show.MouseX.style.backgroundColor = 'rgb('+ rgb.join(',') +')';
+                document.Show.MouseY.style.backgroundColor = 'rgb('+ rgb.join(',') +')';
+                document.Show.bColor.style.backgroundColor = 'rgb('+ rgb.join(',') +')';
+                document.Show.bColor.value =  'rgb('+ rgb.join(',') +')'
+
+                for(var i = 0; i < 3; i++)
+                fontRGB.push(Math.floor(Math.random() * 255));
+                document.Show.MouseX.style.color = 'rgb('+ fontRGB.join(',') +')';
+                document.Show.MouseY.style.color = 'rgb('+ fontRGB.join(',') +')';
+                document.Show.fColor.style.backgroundColor = 'rgb('+ rgb.join(',') +')';
+                document.Show.fColor.value =  'rgb('+ fontRGB.join(',') +')'
+
+                window.onclick = function() {
+
+                  alert("back: " + document.body.style.backgroundColor+"\n"+ "font: " + document.Show.MouseX.style.color);
+
+
+                }
+
+                return true
+                }
+
+
+
+
+
+
+
+
+</script>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+        input{
+        color: #ccc;
+        font: 80px "Press Start 2P";
+        margin: auto;
+        border:none;
+        }
+
+        form {
+        margin-top:50px;
+        text-align:center;
+        }
+
+        label {
+        color: #ccc;
+        font: 80px "Press Start 2P";
+        margin: auto;
+        }
+
+        #color{
+
+        font-size:20px;
+        }
+
+    </style>
+
+</head>
+
+<body class="b">
+
+<form name="Show">
+    <label name="oX">X:</label><input type="text"  name="MouseX" value="0" size="4"><br>
+    <label name="oY">Y:</label><input type="text"  name="MouseY" value="0" size="4"><br>
+    <label id="color">background  :</label><input id="color" type="text"  name="bColor" value="0" size="20"><br>
+    <label id="color">font        :</label><input id="color" type="text"  name="fColor" value="0" size="20"><br>
+</form>
+
+
+</body>

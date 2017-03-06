@@ -1,0 +1,88 @@
+<html>
+  <head>
+  <link rel='stylesheet' href='style.css'/>
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<style>
+.kafa {
+    top:0px;
+    left:0px;
+    position:absolute;
+    z-index:200;
+    width:40px;
+    height:53px;
+    background-image: url("http://www.imgim.com/3069incil2983932.png");
+}
+body {background-color:white;}
+#site {
+    width:1330px;
+    height:600px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+}
+
+</style>
+
+
+  </head>
+  <body>
+    <div id="site">
+        <div id="snowZone">
+          <img class="logo" src="http://imgim.com/tava.png" alt="Google">
+        </div>
+    </div>
+    <script>
+    // Snow Falling
+        function KafaAt() {
+            var $kafa = $(),
+                createkafa = function () {
+                    var qt = 100;
+                    for (var i = 0; i < qt; ++i) {
+                        var $gaffa = $('<div class="kafa"></div>');
+                        $gaffa.css({
+                            'left': (Math.random() * $('#site').width()) + 'px',
+                            'top': (- Math.random() * $('#site').height()) + 'px'
+                        });
+                        // add this gaffa to the set of gaffas
+                        $kafa = $kafa.add($gaffa);
+                    }
+                    $('#snowZone').prepend($kafa);
+                },
+
+                kafaYagmur = function() {
+                    $kafa.each(function() {
+
+                        var singleAnimation = function($flake) {
+                            $flake.animate({
+                                top: "500px",
+                                opacity : "0",
+                            }, Math.random()*-4000 + 5000, function(){
+                                // this particular snow flake has finished, restart again
+                                $flake.css({
+                                    'left': (Math.random() * $('#site').width()) + 'px',
+                                    'top': (- Math.random() * $('#site').height()) + 'px',
+                                    'opacity': 1
+                                });
+                                singleAnimation($flake);
+                            });
+                        };
+                        singleAnimation($(this));
+                    });
+            };
+
+            createkafa();
+            kafaYagmur();
+        }
+        KafaAt();
+
+    </script>
+    <script>
+        $('#site').mousemove(function(e) {
+        $('.logo').offset({
+            left: e.pageX,
+            top: e.pageY + 20
+        });
+    });
+    </script>
+  </body>
+</html>

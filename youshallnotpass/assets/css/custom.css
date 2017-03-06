@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,cyrillic-ext,latin-ext,cyrillic,greek);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700,400&subset=latin,latin-ext);
+h1{margin-top: 10%;font-family: 'Ubuntu', sans-serif;font-size: 3.5rem;color: #c0392b;text-align: center;text-shadow: 1px 1px #a00000;}
+body{background: #34495e}
+.rowX{width: 70%;margin-left:15%;margin-right: 15%;}
+#password{border:0px solid white;width:100%;font-size: 3rem;background: #c0392b;margin: 0 auto;color:#34495e}
+#password:focus {outline: none !important;border:0px solid;box-shadow: 0 0 15px #719ECE;}
+#comm{color: white;font-family: helvetica, arial, sans-serif;font-weight: 600; font-size: 76px;margin-top:100px;float:left;}
+.easing{
+-webkit-transition: all 700ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+   -moz-transition: all 700ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+     -o-transition: all 700ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+        transition: all 700ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+-webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+   -moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+     -o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+        transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);}

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+
+	<style>
+		.h40 {
+			height: 40px;
+		}
+		
+		.h100 {
+			height: 100px;
+		}
+		
+		.h50 {
+			height: 50px;
+		}
+		
+		.red-div {
+			background: #D61F27;
+			transform: skew(-30deg, 0deg);
+			-webkit-transform: skew(-30deg, 0deg);
+			-moz-transform: skew(-30deg, 0deg);
+			-o-transform: skew(-30deg, 0deg);
+			-ms-transform: skew(-30deg, 0deg);
+		}
+		
+		.black-div {
+			background: #333;
+			transform: skew(-30deg, 0deg);
+			-webkit-transform: skew(-30deg, 0deg);
+			-moz-transform: skew(-30deg, 0deg);
+			-o-transform: skew(-30deg, 0deg);
+			-ms-transform: skew(-30deg, 0deg);
+		}
+		
+		.skew {
+			font-size: 0.2vmax;
+			transform: skew(-30deg, 0deg);
+			-webkit-transform: skew(-30deg, 0deg);
+			-moz-transform: skew(-30deg, 0deg);
+			-o-transform: skew(-30deg, 0deg);
+			-ms-transform: skew(-30deg, 0deg);
+		}
+		
+		.text-skew {
+			color: white;
+			text-align: center;
+			font-size: 1.5rem;
+    		line-height: 40px;
+			transform: skew(30deg, 0deg);
+			-webkit-transform: skew(30deg, 0deg);
+			-moz-transform: skew(30deg, 0deg);
+			-o-transform: skew(30deg, 0deg);
+			-ms-transform: skew(30deg, 0deg);
+		}
+		.text-skew i {
+			font-size: 22px;
+		}
+		
+		.text-skew-tab {
+			text-decoration: none;
+			color: white;
+			font-size: 0.95vmax;
+			/*font-size: .9em;*/
+			font-weight: bold;
+			width: 300px;
+			height: 100px;
+			top:0;
+			bottom:0;
+			margin-top: -5%;
+			transform: skew(30deg, 0deg);
+			-webkit-transform: skew(30deg, 0deg);
+			-moz-transform: skew(30deg, 0deg);
+			-o-transform: skew(30deg, 0deg);
+			-ms-transform: skew(30deg, 0deg);
+		}
+		.text-skew-tab-2{
+			color: white;
+			font-size: 0.75vmax;
+			/*font-size: .9em;*/
+			font-weight: bold;
+			width: 300px;
+			height: 100px;
+			top:0;
+			bottom:0;
+			margin-top: -7%;
+			transform: skew(30deg, 0deg);
+			-webkit-transform: skew(30deg, 0deg);
+			-moz-transform: skew(30deg, 0deg);
+			-o-transform: skew(30deg, 0deg);
+			-ms-transform: skew(30deg, 0deg);
+		}
+		.padr-5 {
+			padding-right: 5px;
+		}
+		
+		.padr-10 {
+			padding-right: 10px;
+		}
+		
+		.padr-20 {
+			padding-right: 20px;
+		}
+		
+		.padr-50 {
+			padding-right: 50px;
+		}
+		
+		.padl-10 {
+			padding-left: 10px;
+		}
+		.padl-5 {
+			padding-left: 5px;
+		}
+		.padl-20 {
+			padding-left: 20px;
+		}
+		.padt-5 {
+			padding-top: 5px;
+		}
+		.padb-5 {
+			padding-bottom: 5px;
+		}
+		.padb-10 {
+			padding-bottom: 10px;
+		}
+		.padb-20 {
+			padding-bottom: 20px;
+		}
+		.margint-40 {
+			margin-top: 40px;
+		}
+		
+		.margint-20 {
+			margin-top: 20px;
+		}
+		
+		.margint-5 {
+			margin-top: 5px;
+		}
+		
+		.marginbot-20 {
+			margin-bottom: 20px;
+			height: 130px;
+		}
+		.marginbot-5 {
+			margin-top: 20px;
+			height: 20px;
+		}
+		a {
+			color: red;
+			font-size: 13px;
+		}
+		
+		.icon-red {
+			color: red;
+		}
+		
+		footer {
+			bottom: 0px;
+			position: relative;
+			width: 100%;
+		}
+		
+		.tabs {
+			left: 20px;
+			height: 30px;
+			overflow: hidden;
+		}
+		
+		.tabs .tab {
+			text-transform: none;
+			background: transparent;
+			height: 30px;
+			overflow: hidden;
+			letter-spacing:0px;
+		}
+		.tabs .tab a {
+			width: 170%;
+			height: 150%;
+			margin-left: -40%;
+			text-align: center;
+			color: #333;
+		}
+		
+		.tabs .tab a:hover {
+			background: rgb(218, 55, 61);
+			color: white;
+		}
+		
+		.tabs .tab a.active {
+			background: #D61F27;
+			color: white;
+			
+		}
+		
+		.tabs .indicator {
+			height: 0;
+			background: transparent;
+		}
+		.hide-tab-scrollbar .tabs {
+			overflow-x: hidden;
+		}
+		.tab-icerik {
+			background: #D61F27;;
+		}
+		
+		.tab-icerik img {
+			width: 100%;
+			height: 120px;
+		}
+		
+		.tab-icerik-text {
+			color: white;
+			float:left;
+		}
+		.tab-icerik-text-2 {
+			color: black;
+			float:left;
+		}
+		
+		.sizdengelenler-icerik-text{
+			color: #101010;
+			font-size: 1.5vmin;
+		}
+		.min-font{
+			font-size: 1.6vmin;
+		}
+		.pad0{
+			padding: 0;
+		}
+		.icon_visibility{
+			position: absolute;
+			background-color:rgba(0, 0, 0, .2);
+			border-radius: 10%;
+			line-height: 20px;
+			color: white;
+			left: 15px;
+			top:0px;
+
+		}
+		.icon_like{
+			position: absolute;
+			background-color:rgba(0, 0, 0, .2);
+			border-radius: 10%;
+			line-height: 20px;
+			color: white;
+			bottom: 50px;
+    		right: 15px;
+		}
+		.icon_like a{
+			color: white;
+		}
+		.icon_like a:hover{
+			color: #fcefef;
+		}
+		.icon_like a:active{
+			color: #D61F27;
+		}
+		.video-show{
+			position: relative;
+			margin-bottom: 5px;
+    		height: 170px;
+		}
+		.tumunu-gor{
+			position:absolute;
+			bottom:5%;
+			left:77%;
+			line-height: 20px;
+		}
+		.tumunu-gor-buton{
+			position: absolute;
+			background-color: white;
+			color: #101010;
+			height: 30px;
+			border-radius: 7px;
+			font-weight: bold;
+			letter-spacing: 0;
+			text-transform: none;
+			line-height: 20px;
+			padding: .3rem 1.4rem;
+			width: 120px;
+			paddding-bottom: 10px;
+			font-size: 11px;
+			right: 45px;
+			bottom: 15px;
+		}.tumunu-gor-buton:hover{
+			background-color: white;
+			color: #101010
+		}    
+		.tumunu-gor-buton i{
+			font-size: .9rem;
+			line-height: inherit;
+		}	
+		
+		
+	
+		.tumunu-gor-buton-sag{
+			position: absolute;
+			background-color: #D61F27;
+			color: white;
+			height: 30px;
+			border-radius: 7px;
+			font-weight: bold;
+			letter-spacing: 0;
+			text-transform: none;
+			line-height: 20px;
+			padding: .3rem 1.4rem;
+			width: 100px;
+			paddding-bottom: 10px;
+			margin-top: 10px;
+			font-size: 8px;
+			right: 15px;
+			bottom: 10px;
+		}.tumunu-gor-buton-sag:hover{
+			background-color:#D61F27;
+			color: white;
+		}
+		.tumunu-gor-buton-sag i{
+			font-size: .6rem;
+			line-height: inherit;
+		}
+		.sag-tab{
+			position: relative;
+			border:1px solid #D61F27;
+			border-radius:7px;
+			padding-left: 0!important;
+			padding-right: 0!important;
+			padding-top: 10px!important;
+			padding-bottom: 10px!important;
+		}.sag-tab img{
+			width: 100%;
+			height: 100px;
+		}
+		#sizdengelenler-tab{
+			
+			margin-left:-9px;
+			padding-left:10px;
+		}
+		#eniyiyorumlar-tab{
+			margin-right:15px;
+		}
+		.white-space{
+			height:20px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col l3 m3 s3 black-div h40">
+				<div class="text-skew">
+					<div>Yorumlar</div>
+				</div>
+			</div>
+			<div class="col l9 m9 s9 red-div h40">
+				<div class="text-skew right padr-50">
+					<div>
+						3578 <i class="padr-20 fa fa-eye"></i>
+						
+						3578 <i class="fa fa-thumbs-o-up"></i>
+					</div>	
+						
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="h50 black"></div>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col l9 m8 s12">
+				<ul class="tabs skew">
+
+					<li class="tab col s1"><a class="active text-skew-tab" href="#enyeniler">En Yeniler</a></li>
+					<li class="tab col s2"><a class="text-skew-tab" href="#cokizlenenler ">Çok İzlenenler</a></li>
+					<li class="tab col s2"><a class="text-skew-tab" href="#cokyorumlananlar">Çok Yorumlananlar</a></li>
+					<li class="tab col s2"><a class="text-skew-tab" href="#cokbegenilenler">Çok Beğenilenler</a></li>
+					<li class="tab col s1"></li>
+				</ul>
+				<div id="enyeniler" class="col s12 l12 m12" style="position:relative;">
+					<div class="col m12 l12 s12 tab-icerik">
+						<div class="padl-10 padr-10 padb-20">
+							<div class="row center   margint-20" style>
+								
+								<div class="col m6 l4 s6 video-show">
+									<div class="icon_visibility">
+										<i class="fa fa-eye"></i>
+										1.3b
+									</div>
+									<div class="icon_like">
+										110
+										<a href=""><i class="fa fa-heart"></i></a>
+									</div>
+									<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+									<br>
+									<div style="display: block;height:38px; width:100%; overflow: hidden; text-overflow: ellipsis; white-space:default;"><a class="tab-icerik-text" href="">Semihin ben amk Sivasın lorem ipsum dolor sit dolorsitdolorsit folotitd</a></div>
+								</div>
+								<div class="col m6 l4 s6 video-show">
+									<div class="icon_visibility">
+										<i class="fa fa-eye"></i>
+										1.3b
+									</div>
+									<div class="icon_like">
+										110
+										<i class="fa fa-heart"></i>
+									</div>
+									<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+									<br>
+									<div><a class="tab-icerik-text" href="">Sivaslı Yoda</a></div>
+								</div>
+								<div class="col m6 l4 s6 video-show">
+									<div class="icon_visibility">
+										<i class="fa fa-eye"></i>
+										1.3b
+									</div>
+									<div class="icon_like">
+										110
+										<i class="fa fa-heart"></i>
+									</div>
+									<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+									<br>
+									<div><a class="tab-icerik-text" href="">Sivaslı Yoda</a></div>
+								</div>
+								<div class="col m6 l4 s6 video-show">
+									<div class="icon_visibility">
+										<i class="fa fa-eye"></i>
+										1.3b
+									</div>
+									<div class="icon_like">
+										110
+										<i class="fa fa-heart"></i>
+									</div>
+									<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+									<br>
+									<div><a class="tab-icerik-text" href="">Sivaslı Yoda</a></div>
+								</div>
+								<div class="col l12 m12 s12">
+									<a class="waves-effect waves-light btn tumunu-gor-buton">Tümünü Gör <i class="fa fa-chevron-down"></i></a>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="cokizlenenler" class="col s12 l12 m12">
+					<div class="col m12 l12 s12 tab-icerik">
+						<div class="padl-10 padr-10 padb-20">
+							<div class="row center   margint-20" style>
+								
+								<div class="col m6 l4 s6 video-show">
+									<div class="icon_visibility">
+										<i class="fa fa-eye"></i>
+										1.3b
+									</div>
+									<div class="icon_like">
+										110
+										<a href=""><i class="fa fa-heart"></i></a>
+									</div>
+									<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+									<br>
+									<div style="display: block;height:38px; width:100%; overflow: hidden; text-overflow: ellipsis; white-space:default;"><a class="tab-icerik-text" href="">Semihin ben amk Sivasın lorem ipsum dolor sit dolorsitdolorsit folotitd</a></div>
+								</div>
+								<div class="col m6 l4 s6 video-show">
+									<div class="icon_visibility">
+										<i class="fa fa-eye"></i>
+										1.3b
+									</div>
+									<div class="icon_like">
+										110
+										<i class="fa fa-heart"></i>
+									</div>
+									<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+									<br>
+									<div><a class="tab-icerik-text" href="">Sivaslı Yoda</a></div>
+								</div>
+								<div class="col m6 l4 s6 video-show">
+									<div class="icon_visibility">
+										<i class="fa fa-eye"></i>
+										1.3b
+									</div>
+									<div class="icon_like">
+										110
+										<i class="fa fa-heart"></i>
+									</div>
+									<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+									<br>
+									<div><a class="tab-icerik-text" href="">Sivaslı Yoda</a></div>
+								</div>
+								<div class="col m6 l4 s6 video-show">
+									<div class="icon_visibility">
+										<i class="fa fa-eye"></i>
+										1.3b
+									</div>
+									<div class="icon_like">
+										110
+										<i class="fa fa-heart"></i>
+									</div>
+									<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+									<br>
+									<div><a class="tab-icerik-text" href="">Sivaslı Yoda</a></div>
+								</div>
+								<div class="col l12 m12 s12">
+									<a class="waves-effect waves-light btn tumunu-gor-buton">Tümünü Gör <i class="fa fa-chevron-down"></i></a>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="cokyorumlananlar" class="col s12 l12 m12">
+					<div class="col m12 l12 s12 tab-icerik">
+						
+					</div>
+				</div>
+				<div id="cokbegenilenler" class="col s12 l12 m12">
+					<div class="col m12 l12 s12 tab-icerik">
+						
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col l3 m4 s12">
+				<div class="white-space hide-on-med-and-up"></div>
+				<ul class="tabs skew">	
+					<li id="sizdengelenler-tab" class="tab col s1"><a class="active text-skew-tab-2" href="#sizdengelenler">Sizden Gelenler</a></li>
+					<li id="eniyiyorumlar-tab" class="tab col s1"><a class="text-skew-tab-2" href="#eniyiyorumlar">En İyi Yorumlar</a></li>		
+				</ul>
+				<div id="sizdengelenler" class="col s12 l12 m12 sag-tab">
+		
+						<div class="col s6 l12 m12 marginbot-20">
+							<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+							<br>
+							<div><a class="tab-icerik-text-2" href="">Sivaslı Yoda</a></div>
+						</div>
+				
+						<div class="col s6 l12 m12 marginbot-20">
+							<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+							<br>
+							<div><a class="tab-icerik-text-2" href="">Sivaslı Yoda</a></div>
+						</div>
+						<div class="col s6 l12 m12 marginbot-20">
+							<a href=""><img src="http://littleboyreports.com/wp-content/uploads/2015/05/Master-Yoda-Star-Wars.jpg" alt=""></a>
+							<br>
+							<div><a class="tab-icerik-text-2" href="">Sivaslı YodaSivaslı YodasSivaslı Yodaodav</a></div>
+						</div>
+						<div class="col l12 m12 s6 marginbot-5">
+							<div class="col s12 l12 m12 tumunu-gor-sag"><a class="waves-effect waves-light btn tumunu-gor-buton-sag">Tümünü Gör <i class="fa fa-chevron-down"></i></a></div>
+						</div>
+				</div>
+				
+				<div id="eniyiyorumlar" class="col s12 l12 m12 sag-tab">
+					
+				</div>
+
+			</div>
+
+
+
+		</div>
+	</div>
+
+</body>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>

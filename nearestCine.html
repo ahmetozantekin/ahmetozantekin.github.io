@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" type="text/css" href="style/myNearest.css"/>
+	<link type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet'  />
+
+	<script type="text/javascript" src="js/mainmap.js"></script>
+	<script type="text/javascript" src="js/navigation.js"></script>
+	<script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=true"></script>
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&sensor=true"></script>
+
+
+</head>
+
+<body onload="initialize()">
+	
+	<section id="mainMap" style="height:500px;width:800px;margin-left:200px;"></section>
+	<section id="errors"></section>
+
+	<section id="information" style="height:50px;width:790px;margin-left:200px;">
+		<span id="byLine"><span id="placeName"></span></span>
+		<br>
+		<span id="byLine"><span id="placeAddress"></span> (<span id="duration"></span>)</span>
+	</section>
+
+
+</body>
+</html>

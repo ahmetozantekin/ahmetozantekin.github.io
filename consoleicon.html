@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Console Icon Test</title>
+    <script type="text/javascript" src="https://cdn.rawgit.com/ahmetozantekin/console.icon/master/console.icon.js"></script>
+    <style>
+        html::after{
+          content:' Ctrl+Shift+J (Windows / Linux)  Cmd+Opt+J (Mac)';
+          font-size:22px;
+          font-family:Arial;
+          display:block;
+          text-align:center;
+          width:300px;
+          position: absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+</body>
+<script>
+   console.icon("beer");
+</script>
+<!-- two parameters -->
+<script>
+   console.icon("beer", "Cheers!");
+</script>
+</html>

@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic);
+@import url(https://fonts.googleapis.com/css?family=Oxygen:700);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700);
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(https://fonts.googleapis.com/css?family=Economica);
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css?family=Molle:400italic);
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro:400,200);
+@import url(https://fonts.googleapis.com/css?family=VT323);
+@import url(https://fonts.googleapis.com/css?family=Jolly+Lodger);
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+@import url(https://fonts.googleapis.com/css?family=Palanquin:400,100);
+@import url(https://fonts.googleapis.com/css?family=Monoton);
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,100);
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+html,body{
+  padding: 0;
+  margin: 0; 
+  overflow-x: hidden;
+}
+a{
+    height: 20px;
+    color: black;
+}
+.social{
+position: fixed;
+bottom: 0;
+right: 10px;    
+}
+.social i{
+    font-size: 35px;
+    padding-left: 10px;
+}
+section{
+    width: 100%;
+    padding:0;   
+}
+section:hover > h1{
+    transition: .2s linear;
+    opacity: .5;
+}
+
+section h1{
+    font-size: 55px;
+    padding: 80px 20px 20px;
+    margin: 0;
+    text-transform: uppercase;
+}
+section h4{
+    margin: 0;
+    font-size: 25px;
+    padding: 0px 20px 70px;
+}
+
+#roboto{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    background: #336699;
+    color:#FFeebb;
+}
+#oxygen{
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 500;
+    color: #e1e1e1;
+    background: #AD1457;
+}
+
+#lobster{
+    font-family: 'Lobster', cursive;
+    font-weight: 500;
+    color: #080808;
+    background: #FF9800;
+}
+
+#lato{
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: #ece;
+    background: #43A047;
+}
+
+
+#josefin{
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
+    background: #6D4C41;
+    color: #ece;
+}
+#abril{
+    font-family: 'Abril Fatface', cursive;
+    font-weight: bold;
+    color: #00B0FF;
+    background: #080808;
+}
+
+#economica{
+    font-family: 'Economica', sans-serif;
+    font-weight: bold;
+    color: #BF360C;
+    background: #D7CCC8;
+}
+
+#bangers{
+    font-family: 'Bangers', cursive;
+    font-weight: bold;
+    color: #E1BEE7;
+    background: #004D40;
+    letter-spacing: 2.5px;
+}
+
+#ubuntu{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: #f4ff81;
+    background: #C62828;
+}
+
+#p2{
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    color: #558B2F;
+    background: #101010;
+}
+
+#molle{
+    font-family: 'Molle', cursive;
+    font-weight: bold;
+    color: #3E2723;
+    background: #E0E0E0;
+}
+
+#advent{
+    font-family: 'Advent Pro',sans-serif;
+    font-weight: bold;
+    color: #B71C1C;
+    background: #FF4081;
+}
+
+#inconsolata{
+    font-family: 'VT323', cursive;
+    color: #fff;
+    background: #1a237e;
+}
+
+#jolly{
+    font-family: 'Jolly Lodger', cursive;
+    color: #010101;
+    background: #EF6C00;
+}
+#guy{
+    font-family: 'Luckiest Guy', cursive;
+    color: #3E2723;
+    background: #D7CCC8;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAH0lEQVQIW2NkYGD4z8DAwMgAAXA2TAAqjqDwSlDJKACcogQHlBM3TAAAAABJRU5ErkJggg==) repeat;
+}
+#palanquin{
+    font-family: 'Palanquin', sans-serif;
+    color: #BDBDBD;
+    background: #455A64;
+}
+#monoton{
+   font-family: 'Monoton', cursive;
+   color: #FF6E40;
+   background: #212121;
+}
+
+#kaushan{
+   font-family: 'Kaushan Script', cursive;
+   color: #0f4897;
+   background: #abed45;
+}
+
+#alegreya{
+   font-weight: 100 !important;
+   font-family: 'Alegreya Sans SC', sans-serif;
+   color: #f1f1f1;
+   background: #dc2145;
+}
+
+#fjalla{
+   font-family: 'Fjalla One', sans-serif;
+   color: #080808;
+   background: #ece;
+}
+
+#helvetica{
+   font-family:"Helvetica Neue", sans-serif;
+   color: #f1f1f1;
+   background: #00aced;
+}
