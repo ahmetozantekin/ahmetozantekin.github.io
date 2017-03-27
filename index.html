@@ -1,0 +1,54 @@
+<html ng-app="omdb">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div ng-controller="otree">
+      <input id="oinput" type="text" ng-keyup="oquery()" ng-model="query" placeholder="Enter a movie name here">
+      <ul>
+          <div id="imgo" style="background-image:url({{queryResult.Poster}})"></div>
+          <div class="wrapo">
+             <a target="blank" href="http://www.imdb.com/title/{{queryResult.imdbID}}">
+                <h1>
+                    {{queryResult.Title}}
+                    <span>{{queryResult.Year}}</span>
+                </h1>
+            </a>
+            <h2>
+                {{queryResult.Director}}
+                <span>
+                     {{queryResult.Country}}
+                </span>
+                <span>
+                    {{queryResult.Production}}
+                </span>
+            </h2>
+            <h4>
+                 {{queryResult.Runtime}}
+                 <span>
+                     {{queryResult.Genre}}
+                 </span>
+            </h4>
+            <h3>
+                {{queryResult.Actors}}
+            </h3>
+            <p>
+                 {{queryResult.Awards}}
+                
+            </p>
+          </div>
+      </ul>
+
+       <div id="sharing" class="sharing-section">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="ahmetozantekin" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+       </div>
+
+       <div class="copy">
+           made with <a href="http://www.omdbapi.com" target="_blank"> OMDB</a> api
+       </div>
+    </div>
+  </body>
+</html>

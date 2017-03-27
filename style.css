@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:200,300,400,700,800,900');
+body,html{
+    margin: 0;
+    padding: 0;
+    background: #000;
+    height: 100vh;
+    font-family: 'Catamaran', sans-serif;
+    overflow: hidden;
+}
+
+.oiactive{
+    top: 2% !important;
+}
+input{
+    transition: .1s all;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(255,255,255,.2);
+    outline: none;
+    padding: 15px 60px;
+    margin: 20px auto;
+    display: block;
+    outline: none;
+    border-radius: 27px;
+    border: none;
+    z-index: 999;
+    color: #fff;
+    font-weight: 400;
+    font-size: 19px;
+}
+.wrapo{
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    right: 40%;
+    color: #fff;
+}
+h1{
+    font-size: 60px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+h1 span{
+    font-size: 30px;
+    font-weight: 200;
+}
+h2{
+    font-size: 20px;
+    font-weight: 100;   
+}
+h2 span{
+    font-size: 15px;
+    font-weight: 900;
+    color: #888;
+    padding-left: 20px;
+}
+h2 span:last-child{
+    color: #888;
+    font-weight: 400;
+}
+h4{
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: .1s all;
+}
+a:hover{
+    opacity: .9;
+}
+h4 span{
+    padding-left: 20px;
+     color: #888;
+}
+h3{
+    font-size: 15px;
+    font-weight: 100;  
+}
+#imgo{
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    height: auto;
+    height: 100%;
+    background-size: cover;
+}
+#imgo::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: linear-gradient(to left,black,78% ,transparent);
+}
+#sharing{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+.copy{
+     position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #333;
+    font-size: 13px;
+}
+.copy a{
+    color: #1b95e0;
+}
