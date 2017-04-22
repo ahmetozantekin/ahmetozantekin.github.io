@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Furkish</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+            background-image: url('https://s-media-cache-ak0.pinimg.com/originals/36/93/fd/3693fd5cf6faa763ddf3d45342ae11a2.jpg');
+            background-size:cover;
+        }
+        @keyframes anima{
+            0%{ 
+                transform: translate(-50%, -50%) scale(1.5) rotate(0)
+            }
+            50%{
+                transform: translate(-50%, -50%) scale(1) rotate(180deg)
+            } 
+            100%{
+                 transform: translate(-50%, -50%) scale(1.5) rotate(360deg)
+            }  
+        }
+        .frk {
+            position: absolute;
+            width: 350px;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: anima 1s infinite;
+        }
+        #bay{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        #bay2{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        #bay3{
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        #bay4{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <audio style="visibility:hidden" controls autoplay>
+    <source src="mevlana.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <img id="bay" src="https://media.giphy.com/media/5X7GDf7zc1Ebu/giphy.gif" alt="">
+    <img id="bay2" src="https://media.giphy.com/media/5X7GDf7zc1Ebu/giphy.gif" alt="">
+    <img id="bay3" src="https://media.giphy.com/media/5X7GDf7zc1Ebu/giphy.gif" alt="">
+    <img id="bay4" src="https://media.giphy.com/media/5X7GDf7zc1Ebu/giphy.gif" alt="">
+    <img src="http://imgim.com/602incie5825860.png" alt="Furkan" class="frk">
+</body>
+
+</html>
